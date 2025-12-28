@@ -1,0 +1,8 @@
+Django
+gunicorn
+numpy
+pandas
+scikit-learn
+xgboost
+lightgbm
+matplotlib

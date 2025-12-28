@@ -1,0 +1,179 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AI-Driven Disease Prediction and Medicine Recommendation System Using Machine Learning</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="{% static 'layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    .bgded {
+      background-image: url('{% static "images/01.webp" %}');
+      background-size: cover;
+      background-position: center;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 2.5rem;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      margin-bottom: 30px;
+      line-height: 1.4;
+      max-width: 90%;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .input100 {
+      width: 300px;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      background: white;
+      color: black;
+    }
+
+    .btn {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    .team-section {
+      background-color: rgba(255, 255, 255, 0.9);
+      margin: 50px auto;
+      padding: 40px 20px;
+      border-radius: 10px;
+      max-width: 900px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .team-section h3 {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .team-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .college-info,
+    .team-info,
+    .guide-info {
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .team-info p,
+    .guide-info p,
+    .college-info p {
+      margin: 5px 0;
+    }
+
+    @media (max-width: 600px) {
+      h3 {
+        font-size: 2rem;
+      }
+
+      .input100 {
+        width: 90%;
+      }
+
+      .team-section {
+        padding: 20px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bgded">
+    <h3>
+      AI-Driven Disease Prediction and Medicine Recommendation System Using Machine Learning
+    </h3>
+    <form action="input" method="POST" enctype="multipart/form-data" class="login100-form validate-form">
+      {% csrf_token %}
+      {% comment %} <input class="input100" type="text" name="name" placeholder="Name" required>
+      <input class="input100" type="password" name="password" placeholder="Password" required>
+      <button type="submit" class="btn">LOGIN</button>
+       {% endcomment %}
+
+       <a href="{% url 'input' %}" class="btn">Start Prediction</a>
+
+    </form>
+  </div>
+
+  <div class="team-section">
+    <h3>👥 Project Team</h3>
+    <p><i>The Project <b>AI-Driven Disease Prediction and Medicine Recommendation System Using Machine Learning</b> is developed by the team</i></p>
+
+    <div class="team-content">
+
+      <div class="college-info">
+        <h4><u>College</u></h4>
+        <p><b>Sri Venkateswara College of Engineering, Tirupati</b></p>
+        <p><i>B. Tech - Computer Science and Engineering</i></p>
+        <p>IV Year - F Section</p>
+        <p>Project Team - 10</p>
+      </div>
+
+      <div class="team-info">
+        <h4><u>Team</u></h4>
+        <p><b>THOTA PRIYA HARSHITHA</b> – <i>22BFA05402</i></p>
+        <p><b>KAMMARA SNEHA</b> – <i>23BFA05L21</i></p>
+        <p><b>JAMSHIR SALMAN</b> – <i>22BFA05351</i></p>
+        <p><b>VEMURU PAVAN KUMAR</b> – <i>22BFA05408</i></p>
+      </div>
+
+      <div class="guide-info">
+        <h4><u>Under the Guidance of</u></h4>
+        <p><b>Mr. T. SANTOSH KUMAR REDDY</b>, M.Tech</p>
+        <p>Assistant Professor</p>
+        <p><i>Department of Computer Science and Engineering</i></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPTS -->
+  <script src="{% static 'layout/scripts/jquery.min.js' %}"></script>
+  <script src="{% static 'layout/scripts/jquery.backtotop.js' %}"></script>
+  <script src="{% static 'layout/scripts/jquery.mobilemenu.js' %}"></script>
+</body>
+</html>
